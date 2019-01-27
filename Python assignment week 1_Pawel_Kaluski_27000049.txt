@@ -1,0 +1,124 @@
+TASK
+	Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message.
+
+CODE
+
+num = int(input("Choose A Number: "))
+mod = num % 2
+if mod > 0:
+	print("You Selected An Odd Number")
+else:
+	print("You Selected An Even Number")
+
+
+TASK
+	Expanding the previous exercise, let’s say I give you a list saved in a variable:
+	a = [1, 4, 9, 16, 25, 36,49, 64, 81, 100]. Write one line of Python that takes this
+	list a and makes a new list that has only the even elements of this list in it.
+CODE
+	
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+b = []
+
+for i in a:
+	if i % 2 == 0:
+		b.append(i)
+print(b)	
+	
+		
+TASK
+	Create a function that takes a list of numbers. Return the largest number in the list.
+
+CODE
+
+ListA = [49, 62, 12, 13, 18, 99, 3, 5, 33, 35, 94, 26, 21, 31, 81, 96, 3, 5, 33, 53]
+
+print ("Largest number in the list: ", max(ListA))
+
+
+TASK
+	Ask the user for a string and print out whether this string is a palindrome or not. (A palindrome is a
+	string that reads the same forwards and backwards.)
+	
+CODE
+
+string = str(input("Enter a word: "))
+
+if(string == string[::-1]):
+      print("The word is a palindrome")
+else:
+      print("The word is not a palindrome")
+
+
+
+TASK
+	Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
+
+CODE
+
+terms = int(input("How many terms? "))
+n1 = 0
+n2 = 1
+count = 0
+
+if terms <= 0:
+   print("Please enter a positive integer")
+elif terms == 1:
+   print("Fibonacci sequence upto",terms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence upto",terms,":")
+   while count < terms:
+       print(n1,end=' , ')
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+
+
+
+TASK
+	Write a program that takes a number and print its square.
+
+CODE
+
+num = int(input("Enter a number to sqaure: "))
+print (num**2)
+	
+TASK
+	Given an list of positive integers with higher than 0 the answer should contain average values.
+
+
+CODE
+
+
+TASK
+	Return the number of vowels per string.
+
+CODE
+
+string = str(input("Enter string: "))
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print("Number of vowels:", vowels)
+
+
+
+TASK
+	Write a program to convert degrees of Fahrenheit to Celsius.
+
+
+CODE
+	
+Fahrenheit = int(input("Enter a temperature in Fahrenheit: "))
+
+Celsius = (Fahrenheit - 32) * 5.0/9.0
+
+print ("Temperature:", Fahrenheit, "F = ", Celsius, " C")
+
+
+
+https://jupyter.org/try

@@ -1,0 +1,13 @@
+CREATE TABLE course (
+
+course_id INTEGER PRIMARY KEY,
+course_name VARCHAR(50),
+course_description VARCHAR(100)
+
+)
+
+
+Adding the Course_day
+
+
+ALTER TABLE course ADD course_day VARCHAR(50)
