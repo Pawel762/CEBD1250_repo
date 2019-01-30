@@ -1,0 +1,112 @@
+---------------------------------------------------------------------------------
+TESTED
+---------------------------------------------------------------------------------
+
+TASK
+	Get all female employees
+
+SQL
+
+SELECT *
+FROM employees
+WHERE
+employees.gender = 'F'
+
+TASK
+	Get all employees hired after 01-01-1995
+SQL
+
+SELECT *
+FROM employees
+WHERE
+employees.hire_date > '1995/01/01'
+
+TASK
+	Get all the valid titles (with to_date equals to 01-01-9999)
+
+SQL
+
+SELECT *
+FROM titles
+WHERE
+titles.to_date = '9999/01/01'
+
+TASK
+	Get all salaries from 60000 to 90000
+
+SQL
+
+SELECT *
+FROM salaries
+WHERE
+saleries.salary >= 60000 and
+salaries.salary <= 90000
+
+
+TASK
+	Get all titles where title is equal to engineer
+
+SQL
+
+SELECT *
+FROM titles
+WHERE
+titles.title = 'engineer'
+
+---------------------------------------------------------------------------------
+NOT TESTED:
+---------------------------------------------------------------------------------
+
+TASK
+	Insert a new row into course table with 1, ‘CED-1250’, ‘Big Data Storage’
+	
+SQL
+
+INSERT INTO course (course_id, course_name, course description)
+VALUES ( 1, 'CED-1250', 'Big Data Storage')
+
+TASK
+	Delete all male employees hired at 01-01-2009
+
+SQL
+
+DELETE FROM employees
+WHERE
+employees.gender = 'M'AND
+employees.hire_date = '2009/01/01'
+
+
+TASK
+	Update the salary of employee 499984 to 100000
+
+SQL
+
+Unable to comply. Please provide approval.
+
+Ones approval is granted, scroll to the bottom to get SQL
+
+
+TASK
+	Delete all titles not valid (with to_date not equal to 01-01-9999)
+
+SQL
+
+DELETE FROM titles
+WHERE
+titles.to_date <> '9999/01/01'
+
+
+
+SQL for Salary reduction:
+
+UPDATE saleries
+SET salary = 100000
+WHERE
+saleries.salary = 499984
+
+
+
+
+
+
+
