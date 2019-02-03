@@ -54,11 +54,11 @@ WHERE
 titles.title = 'engineer'
 
 ---------------------------------------------------------------------------------
-NOT TESTED:
+TESTED:
 ---------------------------------------------------------------------------------
 
 TASK
-	Insert a new row into course table with 1, ‘CED-1250’, ‘Big Data Storage’
+	Insert a new row into course table with 1, â€˜CED-1250â€™, â€˜Big Data Storageâ€™
 	
 SQL
 
@@ -99,10 +99,10 @@ titles.to_date <> '9999/01/01'
 
 SQL for Salary reduction:
 
-UPDATE saleries
+UPDATE salaries
 SET salary = 100000
 WHERE
-saleries.salary = 499984
+salaries.salary = 499984
 
 
 
