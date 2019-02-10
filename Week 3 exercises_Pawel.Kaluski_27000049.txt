@@ -1,0 +1,88 @@
+TASK	
+	Write a SQL query to get the third highest salary of an employee from
+	employee_table
+	
+SQL
+
+
+
+TASK	
+	Write a SQL query to find the names of employees that begin with ‘A’
+
+SQL
+
+	
+
+
+QUESTION
+
+	What is the difference between ‘HAVING’ CLAUSE and a ‘WHERE’ CLAUSE
+
+Both clauses are filters. Having is used on on summarized or grouped data.
+
+QUESTION
+	
+	List, and explain the elements of an Entities and Relationships model
+
+Relationship(s): is how entities are linked together.
+Primary key: Unique Row identifier that can be used to join two entities (Tables). Can be a single or multiple attributes (columns) Primary key cannot be null.
+Foreign key: is one or multiple fields in an entity that can be matched to the a primary key to join both tables.
+Attributes (Fields): columns with various formats. Example: Sting, date , integer...
+
+QUESTION
+
+	What are the different categories of SQL statements, what does each group do
+
+
+DDL: Data Definintion Language is used to creates tables, defines column propreties, etc...
+DML: Data Manipulation Language is to retreive existing information by filtering or not the table(s).
+DCL: Data Control Language is used to control access to the data. Could be very granular, all the way to restrict a column view.
+TCL: Transaction Control Language is used to create savepoints. it acts like a "Ctrl-Z" until you commit, then... you are out of luck.
+
+QUESTION	
+	
+	List, and explain, the different types of joins
+
+Self: Single entity
+Inner: only what intersects between two tables
+Left: all in the first table plus what matched from the second
+Right:all from second table plus what matched from the first
+Full Outtereverything from both tables match or no match
+
+
+QUESTION
+
+	What is the difference between NULL value, Zero, and Blank space
+
+NULL Value: could be a letter in a integer feild
+ZERO: in an integer value.
+BLANK SPACE: is a string value.
+
+
+TASK
+	Write a SQL that returns the employee name and title for all employees with even
+	number as actual salary (to_date is 9999-01-01)
+
+SQL
+	
+
+TASK
+	
+	What is wrong with the following query, re-write it making the needed corrections.
+
+	SELECT employee.emp_no, AVG(salaries.salary)
+
+	FROM employee INNER JOIN salaries AT employee.emp_no = salaries.emp_no
+	HAVING AVG(salaries.salary) > 10000
+	
+	GROUP BY employee.emp_no
+
+Corrected version:
+
+SELECT 
+employee.emp_no, 
+AVG(salaries.salary)
+FROM employee 
+INNER JOIN salaries ON employee.emp_no = salaries.emp_no
+HAVING AVG(salaries.salary) > 10000
+GROUP BY employee.emp_no
